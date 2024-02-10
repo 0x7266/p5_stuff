@@ -1,7 +1,8 @@
 class Ring {
-  constructor(r, num) {
+  constructor(r, num, diameter) {
     this.r = r;
     this.num = num;
+    this.diameter = diameter;
 
     this.speed = 0;
   }
@@ -11,7 +12,7 @@ class Ring {
       let angle = (360 / this.num) * i;
       let x = this.r * cos(angle + this.speed);
       let y = this.r * sin(angle + this.speed);
-      ellipse(x, y, 10, 10);
+      ellipse(x, y, this.diameter, this.diameter);
     }
   }
 

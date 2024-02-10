@@ -5,7 +5,7 @@ function setup() {
   createCanvas(400, 400);
   angleMode(DEGREES);
   for (let i = 0; i < n; i++) {
-    rings[i] = new Ring(150 - i * 10, 50 - i * 5);
+    rings[i] = new Ring(150 - i * 10, 50 - i * 5, 6 - i * 0.5);
   }
   r = new Ring(150, 40);
 }
