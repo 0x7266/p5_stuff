@@ -5,6 +5,7 @@ class Ring {
     this.diameter = diameter;
 
     this.speed = 0;
+    this.amt = 0;
   }
 
   display() {
@@ -18,5 +19,11 @@ class Ring {
 
   move() {
     this.speed += 1;
+    this.speed = (easeInOutQuad(this.amt) * 360) / this.num;
+    if (this.amt > 1) {
+      this.amt = 0;
+    } else {
+      this.amt += 0.01;
+    }
   }
 }
