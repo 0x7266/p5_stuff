@@ -12,6 +12,8 @@ let x = 100;
 let y = 100;
 let dx = 2;
 let dy = 2;
+let w = 100;
+let h = 50;
 
 function preload() {
 	for (let i = 0; i < names.length; i++) {
@@ -25,7 +27,19 @@ function setup() {
 
 function draw() {
 	background(0);
-	image(img[1], x, y);
+	stroke(255);
+	// rect(x, y + h / 2, w, h);
+	image(img[2], x, y);
 	x += dx;
 	y += dy;
+	edgeHandling();
+}
+
+function edgeHandling() {
+	if (x <= 0 || x + w >= width) {
+		dx = dx * -1;
+	}
+	if (y + h / 2 <= 0 || y + h / 2 + h >= height) {
+		dy = dy * -1;
+	}
 }
