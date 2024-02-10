@@ -11,4 +11,5 @@ function draw() {
   translate(width / 2, height / 2);
 
   r.display();
+  r.move();
 }
