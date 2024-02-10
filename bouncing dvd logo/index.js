@@ -8,6 +8,10 @@ let names = [
 	"assets/images/dvd_yellow.png",
 	"assets/images/dvd_green.png",
 ];
+let x = 100;
+let y = 100;
+let dx = 2;
+let dy = 2;
 
 function preload() {
 	for (let i = 0; i < names.length; i++) {
@@ -21,5 +25,7 @@ function setup() {
 
 function draw() {
 	background(0);
-	image(img[1], 100, 100);
+	image(img[1], x, y);
+	x += dx;
+	y += dy;
 }
