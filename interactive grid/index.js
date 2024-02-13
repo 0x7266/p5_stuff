@@ -2,6 +2,7 @@ let cols;
 let rows;
 let spacing = 20;
 let size = [];
+let scale = 0.1;
 
 function setup() {
   createCanvas(400, 400);
@@ -11,20 +12,23 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(0);
   for (let i = 0; i < cols; i++) {
     size[i] = [];
     for (let j = 0; j < rows; j++) {
-      size[i][j] = dist(
-        mouseX,
-        mouseY,
-        spacing / 2 + i * spacing,
-        spacing / 2 + j * spacing,
-      );
+      size[i][j] =
+        dist(
+          mouseX,
+          mouseY,
+          spacing / 2 + i * spacing,
+          spacing / 2 + j * spacing,
+        ) * scale;
     }
   }
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {
+      noStroke();
+      fill(220);
       rect(
         spacing / 2 + i * spacing,
         spacing / 2 + j * spacing,
