@@ -2,9 +2,10 @@ class Heart {
   constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.r = random(2, 4);
+    this.r = random(0.4, 1);
   }
   display() {
+    push();
     translate(this.x, this.y);
     beginShape();
     for (let t = 0; t < 360; t++) {
@@ -14,5 +15,6 @@ class Heart {
       vertex(x, y);
     }
     endShape();
+    pop();
   }
 }

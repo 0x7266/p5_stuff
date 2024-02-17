@@ -1,11 +1,16 @@
-let h;
+let hearts = [];
 function setup() {
   createCanvas(400, 400);
   angleMode(DEGREES);
-  h = new Heart(width / 2, height / 2);
 }
 
 function draw() {
   background(220);
-  h.display();
+  for (let i = 0; i < hearts.length; i++) {
+    hearts[i].display();
+  }
+}
+
+function mouseDragged() {
+  hearts.push(new Heart(mouseX, mouseY));
 }
