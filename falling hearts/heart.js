@@ -4,9 +4,11 @@ class Heart {
     this.y = y;
     this.r = random(0.4, 1);
     this.dy = random(2, 3);
+    this.color = colors[floor(random(colors.length))];
   }
   display() {
     push();
+    fill(this.color);
     translate(this.x, this.y);
     beginShape();
     for (let t = 0; t < 360; t++) {

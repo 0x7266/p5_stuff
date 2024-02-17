@@ -1,11 +1,13 @@
 let hearts = [];
+let colors = [];
 function setup() {
   createCanvas(400, 400);
   angleMode(DEGREES);
+  colors = ["#edbba8", "#e66f3c", "#c6b6d5", "#f1d147", "#a4cd98", "#95accb"];
 }
 
 function draw() {
-  background(220);
+  background("#e5e1dc");
   for (let i = 0; i < hearts.length; i++) {
     hearts[i].display();
     hearts[i].fall();
