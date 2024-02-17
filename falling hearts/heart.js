@@ -3,6 +3,7 @@ class Heart {
     this.x = x;
     this.y = y;
     this.r = random(0.4, 1);
+    this.dy = random(2, 3);
   }
   display() {
     push();
@@ -16,5 +17,8 @@ class Heart {
     }
     endShape();
     pop();
+  }
+  fall() {
+    this.y += this.dy;
   }
 }

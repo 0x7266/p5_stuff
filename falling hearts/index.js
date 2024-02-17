@@ -8,6 +8,7 @@ function draw() {
   background(220);
   for (let i = 0; i < hearts.length; i++) {
     hearts[i].display();
+    hearts[i].fall();
   }
 }
 
